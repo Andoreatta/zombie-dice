@@ -10,16 +10,6 @@ print('''
 ''')
 # usuário insere nome que é armazenado numa lista de jogadores junto com o placar inicial de pontuação ["Nome", cerebros, tiros]
 player_scoreboard = [[input("Insira seu nick: "), 0, 0]]
-
-# if player_quantity != int():
-#   print("O input precisa ser um número inteiro")
-#   player_quantity = int(input("Quantidade de jogadores do jogo: "))
-# elif player_quantity <= 1:
-#   print("Não é possível jogar sozinho. Tente com alguém.")
-#   player_quantity = int(input("Quantidade de jogadores do jogo: "))
-# Pequisei inúmeras maneiras de conseguir diferenciar, vi o método type(), isinstance()... dava errado,
-# então parti pra algo fora do escopo pedido na checklist
-
 while True:
   try:
     player_quantity = int(input("Máximo de jogadores permitidos é 8, quantos irão jogar? : "))
@@ -38,10 +28,6 @@ print("----- Total de Jogadores -----")
 for iterator in range(0, player_quantity):
   print('\t', player_scoreboard[iterator][0])
 
-# Estou pensando em poder deixar cada nome ser assignado
-# print("Cada um dos jogadores foram assignados nomes númericos em ordem crescente.")
-# print("Você deseja assignar nomes ou deixar os padrões? y/n :")
-
 print('''
 Os dados sempre serão rolados automaticamente, mas a decisão de continuar ou não é sua!
 
@@ -55,9 +41,6 @@ Os dados sempre serão rolados automaticamente, mas a decisão de continuar ou n
 
 O jogo irá começar agora!
 ''')
-# GREEN_DICE = 'TPPCCC'
-# YELLOW_DICE = 'TTPPCC'
-# RED_DICE = 'TTTPPC'
 
 # prefiro dessa maneira se não seria um inferno de ifs maior do que já é, espero que entenda prof.
 GREEN_DICE = ['TIRO', 'PASSOS', 'PASSOS', 'CÉREBRO', 'CÉREBRO', 'CÉREBRO']
