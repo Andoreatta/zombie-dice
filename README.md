@@ -1,2 +1,2 @@
 # ZombieDice
- ZombieDice game made in Python
+ Game made in Python
