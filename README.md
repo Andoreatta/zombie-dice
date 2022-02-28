@@ -1,2 +1,6 @@
 # ZombieDice
- Game made in Python
+ CLI game made in Python
+
+- Player Scoreboard
+- Score indexing per player
+- Input assertion
