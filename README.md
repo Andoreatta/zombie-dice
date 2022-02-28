@@ -2,5 +2,5 @@
  CLI game made in Python
 
 - Player Scoreboard
-- Score indexing per player
+- Score indexing for each player
 - Input assertion
