@@ -1,0 +1,34 @@
+[dinamica]
+---------
+1. Jogador0 insere seu nome
+2. Jogador0 insere quantidade de players desejados
+3. Jogador0 adiciona o nome de cada player ou deixa ser assignado automaticamente.
+4. Turno sempre começa com o primeiro player e segue em ordem crescente.
+5. Os primeiros dados são rolados pro Jogador0
+6
+[estrutura]
+--------
+(jogadores)
+Um ou mais
+(dados de tabuleiro)
+Existem 13 dados de 6 faces
+Existem 3 tipos de dados (verdes, vermelhos, amarelos)
+Existem 3 tipos de símbolos/utilidades ([T]iro, [C]érebro e [P]assos)
+Os dados vermelhos são de dificuldade difícil (3 dados no total) "TTTPPC"
+Os dados amarelos são de dificuldade média    (4 dados no total) "TTPPCC"
+Os dados verdes são de dificuldade fácil      (6 dados no total) "TPPCCC"
+
+Cérebro (Você devorou o cérebro de sua vítima. Separe os dados de Cérebro na sua esquerda)
+Espingarda (Sua vítima revidou. Separe os dados de Espingarda na sua Direita)
+Pegadas (Sua vítima escapou. Fique com os dados de pegadas na sua frente. )
+
+anotações do vídeo sobre zombiedice
+-------------
+Push your luck.
+pegue 3 dados aleatoriamente.
+role os dados
+cada cérebro é um ponto
+cada pé é um sobrevivente que fugiu
+você decide se continua ou continua puxando sua sorte.
+3 tiros e você perde os pontos
+o primeiro que alcançar 13 cérebros ou vence. ou se os oponentes desistirem
