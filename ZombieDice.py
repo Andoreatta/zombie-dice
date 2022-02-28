@@ -68,6 +68,7 @@ shot_count = 0
 player_turn_iterator = 0
 
 # função que quando chamada executa o jogo, ficou com muitas linhas pra uma função e num futuro posso corrigir isso
+# também uso excessivo de ifs, mas pode ser só obsessão por otimização minha, a versão otimizada vou tentar adicionar um iterador dos dados
 def start_game():
 
   global brain_count
@@ -192,17 +193,17 @@ while True:
     turn = input("Deseja [t]entar novamente, [p]assar o turno ou [f]inalizar o jogo? t/p/f :").lower()
     assert turn == "t" or turn =="p" or turn =="f"
     if turn == "p":
-      # retira score de cérebros antigo, soma com a quantidade nova e checa o score para aviso de que perdeu ou ganhou
+      # retira score de cérebros antigo, soma com a quantidade nova e checa o score para avisar que ganhou
       old_score = player_scoreboard[player_turn_iterator].pop(1)
       player_scoreboard[player_turn_iterator].insert(1,  brain_count + old_score) 
       if player_scoreboard[player_turn_iterator][1] >= 13:
         print(f"Você venceu o jogo, {player_scoreboard[player_turn_iterator][0]}!!!!!!!!!!!!!!!!!!!!!\n")
         print(player_scoreboard)
         break
-      # adiciona score de tiros novo
+        
+      # retira score de tiros antigo, soma com a quantidade nova e checa o score para aviso de que perdeu os pontos e/ou passa o turno
       old_score = player_scoreboard[player_turn_iterator].pop(2)
       player_scoreboard[player_turn_iterator].insert(2,  shot_count + old_score)
-
       if player_scoreboard[player_turn_iterator][2] >= 3:
         print(f"\n \n------ {player_scoreboard[player_turn_iterator][0]} ,você perdeu todos os pontos! ------\n \n")
         player_scoreboard[player_turn_iterator][1] = 0
@@ -210,15 +211,19 @@ while True:
       shot_count = 0
       brain_count = 0
       player_turn_iterator += 1
-      print(f"Scoreboard: \n {player_scoreboard}")
+      print(f"\n Scoreboard:{player_scoreboard}")
       start_game()
+      
+    # finaliza jogo printando scoreboard final dos jogadores
     elif turn =="f":
       print(player_scoreboard)
       break
+    # caso o player decida rolar os dados novamente
     else:
       print("\n---- Tentando novamente ----\n")
-      print(player_scoreboard)
+      print(f"\n Scoreboard: {player_scoreboard})
       start_game()
+            
   except AssertionError:
     print("Somente tn/p são aceitos")
   except IndexError:
