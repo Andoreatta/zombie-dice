@@ -204,7 +204,7 @@ while True:
     # caso o player decida rolar os dados novamente
     else:
       print("\n---- Tentando novamente ----\n")
-      print(f"\n Scoreboard: {player_scoreboard})
+      print(f"\n Scoreboard: {player_scoreboard}")
       start_game()
             
   except AssertionError:
