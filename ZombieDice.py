@@ -50,6 +50,7 @@ player_turn_iterator = 0
 
 # Checa a quantidade de pontos
 def check_score():
+  global shot_count
   global player_turn_iterator
   if shot_count >= 3 or player_scoreboard[player_turn_iterator][2] >= 3:
     print(f"\n------ {player_scoreboard[player_turn_iterator][0]} ,você levou muitos tiros e perdeu todos os pontos! ------")
